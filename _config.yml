@@ -3,7 +3,7 @@ title: Howon Song
 email: howon@songhowon.com
 description: "Howon Song: web/mobile developer, author of Instant Music, admin of TogetherJS, CS major at Cornell"
 baseurl: ""
-url: "http://songhowon.com"
+url: "http://songhowon.com/freshBlog/"
 
 # Build settings
 markdown: kramdown
