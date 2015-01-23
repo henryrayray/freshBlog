@@ -28,10 +28,6 @@ ul.home-links li {
   margin: 0 0 150px 0;
 }
 
-.about-right-pane {
-  font-size: 20px;
-}
-
 ul.dash {
   list-style: none;
   margin-left: 0;
@@ -44,11 +40,16 @@ ul.dash li.other:before {
   margin-left: -1em;
 }
 
-.about-right-pane, .projects-right-pane, .blog-right-pane {
-  display: none;
+table.vc td {
+  vertical-align: middle;
 }
 
-.bg-container {
+.about-right-pane, .projects-right-pane, .blog-right-pane {
+  display: none;
+  font-size: 20px;
+}
+
+/*.bg-container {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -70,4 +71,60 @@ ul.dash li.other:before {
   background-size: cover;
   opacity: 0.05;
   transform: scale(1.2, 1.2);
+}*/
+
+.proj-box {
+  width: 125px;
+  height: 125px;
+  border: 1px solid #e9e9e9;
+  float: left;
+  margin: 0 15px 0 0;
+  display: none;
+  line-height: 125px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.instant-music-box {
+  background-color: #3498DB;
+}
+
+.togetherjs-box {
+  background-color: #4B4E75;
+}
+
+.newsclassifier-box {
+  background-color: #DBAE4D;
+}
+
+.calendarplus-box {
+  background-color: #A84317;
+}
+
+.secret-box {
+  background-color: black;
+  font-size: 1.5em;
+}
+
+.blog-writing-effect {
+  display: none;
+}
+
+/* css typewriter effect */
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+.typing {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: type 3s steps(50, end);
+  animation: type 3s steps(50, end);
 }
