@@ -1,15 +1,32 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/post_detail.css">
 
-  <article class="post-content">
-  {{ content }}
-  </article>
-
+<div class="custom-navbar">
+  <div class="nav-menu"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></div>
+  <div class="page-title">BLOG</div>
 </div>
+
+<div class="container-fluid">
+  <div class="row whole-container">
+    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <div class="post-detail-container">
+      <header class="post-header">
+        <h1>{{ page.title }}</h1>
+        <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      </header>
+
+      <article class="post-content">
+        {{ content }}
+      </article>
+
+      <div class="controls">
+        <a href="#">Back to list</a>
+      </div>
+    </div>
+  </div>
+</div>
+
