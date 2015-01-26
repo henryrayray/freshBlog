@@ -3,6 +3,7 @@ layout: default
 ---
 
 <link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/blog.css">
 <link rel="stylesheet" href="/css/post_detail.css">
 
 <div class="custom-navbar">
@@ -12,21 +13,33 @@ layout: default
 
 <div class="container-fluid">
   <div class="row whole-container">
-    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-    <div class="post-detail-container">
-      <header class="post-header">
-        <h1>{{ page.title }}</h1>
-        <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-      </header>
-
-      <article class="post-content">
-        {{ content }}
-      </article>
-
-      <div class="controls">
-        <a href="javascript:history.back()">Back to list</a>
+    <div class="col-md-2 col-sm-1">
+      <div class="categories-container">
+        <span class="categories-title">CATEGORIES</span>
+        <ul class="categories">
+          <li><a href="/blog/">#all</a></li>
+          <li class="general"><a href="/blog/general">#general</a></li>
+          <li class="ideas"><a href="/blog/ideas">#ideas</a></li>
+          <li class="development"><a href="/blog/development">#development</a></li>
+        </ul>
       </div>
-    </div>
+    </div>  
+    <div class="col-md-8 col-sm-10">
+      <div class="post-detail-container">
+        <header class="post-header">
+          <h1>{{ page.title }}</h1>
+          <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        </header>
+
+        <article class="post-content">
+          {{ content }}
+        </article>
+
+        <div class="controls">
+          <a href="javascript:history.back()">Back to list</a>
+        </div>
+      </div>
   </div>
 </div>
 
+<script src="/blog/blog.js"></script>
